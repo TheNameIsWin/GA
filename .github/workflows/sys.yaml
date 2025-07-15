@@ -1,0 +1,16 @@
+name: System Info Printer
+
+on: [push, workflow_dispatch]
+
+jobs:
+  print-info:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print Current Date
+        run: date
+
+      - name: Print System Info
+        run: uname -a
+
+      - name: Print Hello Again
+        run: echo "This is my second basic workflow!"
